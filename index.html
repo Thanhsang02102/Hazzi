@@ -1,68 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title> KEYPICKSS </title>
-</head>
-
-<body>
-    <div class="greetings">
-        <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
-        <span>X</span>
-        <span>I</span>
-        <span>N</span>
-        <span>C</span>
-        <span>H</span>
-        <span>A</span>
-        <span>O</span>
-        <span>H</span>
-        <span>A</span>
-        <span>Z</span>
-        <span>Z</span>
-        <span>I</span>
-        <span>X</span>
-        <span>I</span>
-        <span>N</span>
-        <span>H</span>
-        <span>G</span>
-        <span>A</span>
-        <span>I</span>
-
-    </div>
-    <div class="description">
-        <span>"Nhấn Nhận Để Nhận Hoa".</span>
-    </div>
-    <div class="button">
-        <button>
-            <a href="flower.html">NHẬN</a>
-        </button>
-
-    </div>
-    <script>
-        async function shareFile(file) {
-            const form = new FormData();
-            form.append('file', file);
-
-            const res = await fetch('https://api.drv.tw/', {
-                method: 'POST',
-                body: form
-            });
-            const json = await res.json();
-            if (json.status === 'OK') {
-                console.log('Public URL:', json.url);
-                return json.url;
-            } else {
-                throw new Error('Upload failed');
-            }
-        }
-
-        // usage (in Node you can use fs.createReadStream)
-    </script>
-</body>
-
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hazzi</title>
+    <meta name="description" content="Trang chủ của Hazzi" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <div class="card">
+        <p class="eyebrow">GitHub Pages</p>
+        <h1>Hazzi</h1>
+        <p class="subtitle">
+          Trang web tĩnh của bạn đã sẵn sàng để hiển thị trên GitHub Pages.
+        </p>
+        <a class="button" href="https://github.com/Thanhsang02102/Hazzi" target="_blank" rel="noreferrer">
+          Xem repository
+        </a>
+      </div>
+    </main>
+  </body>
 </html>
